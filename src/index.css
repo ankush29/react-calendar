@@ -1,0 +1,216 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+
+.App {
+  text-align: center;
+}
+
+.icon {
+  font-family: 'Material Icons', serif;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    position: relative;
+}
+
+header {
+  display: block;
+  width: 100%;
+  padding: 1.75em 0;
+}
+
+header #logo {
+  font-size: 175%;
+  text-align: center;
+  line-height: 1;
+}
+
+header #logo .icon {
+  padding-right: .25em;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+
+/* GRID */
+
+.row {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.row-middle {
+  align-items: center;
+}
+
+.col, .year-col {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.col-start {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.col-center {
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.col-end {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+
+/* Calendar */
+
+.calendar {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.calendar .header {
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 5em;
+  font-size: 115%;
+  padding: 1.5em 0;
+}
+
+.calendar .header .icon {
+  cursor: pointer;
+}
+
+.calendar .header .icon:hover {
+  transform: scale(1.75);
+  transition: .25s ease-out;
+  color: #ccc
+}
+
+.calendar .header .icon:first-of-type {
+  margin-left: 1em;
+}
+
+.calendar .header .icon:last-of-type {
+  margin-right: 1em;
+}
+
+.calendar .days {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 70%;
+  padding: .75em 0;
+}
+
+.calendar .body .cell {
+  position: relative;
+  height: 5em;
+  border: 1px solid #e1e1e1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+}
+
+.calendar .body .cell:hover {
+  background: #ccc;
+  transition: 0.5s ease-out;
+}
+
+.calendar .body .selected {
+  background: #ccc;
+}
+
+.calendar .body .cell .number {
+  position: absolute;
+  font-size: 82.5%;
+  line-height: 1;
+  top: .75em;
+  right: .75em;
+  font-weight: 700;
+}
+
+.calendar .body .disabled {
+  color: darkgray;
+  pointer-events: none;
+}
+
+.calendar .body .col {
+  flex-grow: 0;
+  flex-basis: calc(100%/7);
+  width: calc(100%/7);
+}
+
+.calendar .header .col {
+  flex-grow: 0;
+  flex-basis: calc(100%/3);
+  width: calc(100%/3);
+  height: 3em;
+  font-size: 16px;
+}
+
+.icon-parent{
+  position: absolute;
+  background: white;
+  top: 4em;
+  height: 9em;
+  z-index: 1;
+}
+
+.icon-parent .icon {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.right {
+  right: 0;
+}
+
+.month {
+  background: white;
+  z-index: 1;
+}
+
+.month .col {
+  cursor: pointer;
+}
+
+.icon-parent .col {
+  cursor: pointer;
+}

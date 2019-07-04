@@ -1,7 +1,9 @@
 {
   "name": "react16-calendar",
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "description": "Naked React, Calendar Custom",
   "private": false,
+  "author": "Ankush Saini",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
